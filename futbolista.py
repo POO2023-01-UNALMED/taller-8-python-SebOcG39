@@ -3,16 +3,16 @@ from deportista import Deportista
 
 class Futbolista(Persona, Deportista):
     listaFutbolistas = []
-    def __init__(self, nombre, edad, altura, sexo, anosPracticando, golesMarcados, tarjetasRojas, piernaHabil):
+    def __init__(self, nombre, edad, altura, sexo, añosPracticando, golesMarcados, tarjetasRojas, piernaHabil):
         Persona.__init__(self,nombre, edad, altura, sexo)
-        Deportista.__init__(self,"Futbol", anosPracticando)
+        Deportista.__init__(self,"Futbol", añosPracticando)
         self.__golesMarcados = golesMarcados
         self.__tarjetasRojas = tarjetasRojas
         self.__piernaHabil = piernaHabil
         Futbolista.listaFutbolistas.append(self)
 
     def __str__(self):
-        return f'Mi nombre es {super().getNombre()} soy profesional en el deporte {super().getDeporte()} Tengo {super().getEdad()} años de edad y llevo {super().getAnosPracticando()} años en el deporte'
+        return f'Mi nombre es {super().getNombre()} soy profesional en el deporte {super().getDeporte()} Tengo {super().getEdad()} años de edad y llevo {super().getAñosPracticando()} años en el deporte'
 
     def getGolesMarcados(self):
         return self.__golesMarcados
